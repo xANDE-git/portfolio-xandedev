@@ -1,0 +1,6 @@
+.claude/
+.wrangler/
+node_modules/
+*.mp4
+*.mov
+*.psd

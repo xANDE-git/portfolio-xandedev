@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /projetos/
+Sitemap: https://xandedev.pages.dev/sitemap.xml

@@ -1,0 +1,276 @@
+/* DedetiMax — linha das dedetizadoras de referência do cliente (vídeo):
+   primeira dobra com foto do técnico e fundo escuro, título forte, faixa de confiança,
+   ambientes com foto, documentação em destaque, rodapé escuro com colunas.
+   Cores: verde-floresta bem escuro + amarelo de alerta (destaques) + verde do WhatsApp nos botões.
+   Fonte: Plus Jakarta Sans (uma família, pesos 400 a 800). Cantos de 14px. */
+
+@font-face{font-family:"Plus Jakarta Sans";src:url("fonts/jakarta.woff2") format("woff2");font-weight:400 800;font-display:swap}
+
+:root{
+  --escuro:#0E241A;
+  --escuro-2:#163527;
+  --amarelo:#FFC83D;
+  --amarelo-2:#FFD86E;
+  --zap:#0F7A40;        /* texto branco com contraste AA */
+  --zap-hover:#0B6334;
+  --fundo:#FFFFFF;
+  --claro:#F3F6F2;
+  --texto:#15201A;
+  --suave:#4B5A51;
+  --linha:#DCE3DD;
+  --raio:14px;
+  --caixa:1160px;
+  --faixa:36px;
+  --fonte:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:110px;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--fundo);color:var(--texto);font:400 1.0625rem/1.6 var(--fonte)}
+h1,h2,h3{font-weight:800;line-height:1.1;letter-spacing:-.02em;margin:0;text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+img,svg{display:block}
+img{max-width:100%;height:auto}
+.sprite{display:none}
+.ic{width:1.25em;height:1.25em;flex:none}
+.caixa{position:relative;z-index:1;width:min(100% - 32px,var(--caixa));margin-inline:auto}
+:focus-visible{outline:3px solid var(--amarelo);outline-offset:3px;border-radius:6px}
+
+.pular{position:absolute;left:16px;top:-60px;z-index:100;background:#fff;color:var(--escuro);padding:10px 14px;border-radius:10px;font-weight:700}
+.pular:focus{top:8px}
+
+/* Faixa de protótipo (sai na versão final) */
+.faixa-prototipo{position:sticky;top:0;z-index:60;background:var(--amarelo);color:#2B2100;font-size:.8125rem;font-weight:600;line-height:1.35;text-align:center;padding:8px 16px}
+
+/* Botões */
+.botao{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:52px;padding:12px 24px;border-radius:999px;font:700 1rem/1.2 var(--fonte);text-decoration:none;transition:background-color .2s,transform .2s,box-shadow .2s}
+.botao:hover{transform:translateY(-1px)}
+.botao-zap{background:var(--zap);color:#fff;box-shadow:0 8px 20px -10px rgba(15,122,64,.8)}
+.botao-zap:hover{background:var(--zap-hover)}
+.botao-amarelo{background:var(--amarelo);color:var(--escuro)}
+.botao-amarelo:hover{background:var(--amarelo-2)}
+.botao-pequeno{min-height:44px;padding:9px 18px;font-size:.9375rem;box-shadow:none}
+.so-celular{display:none}
+
+/* Topo */
+.topo{background:#fff;border-bottom:1px solid var(--linha)}
+.topo-linha{display:flex;align-items:center;gap:24px;min-height:72px}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none}
+.marca-icone{display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:var(--escuro);color:var(--amarelo)}
+.marca-icone svg{width:22px;height:22px}
+.marca-nome{font-weight:800;font-size:1.375rem;letter-spacing:-.02em;color:var(--escuro)}
+.marca-nome b{color:var(--zap)}
+.menu{display:flex;gap:2px;margin-left:auto}
+.menu a{text-decoration:none;font-weight:600;font-size:.9375rem;padding:10px 12px;border-radius:999px;color:var(--suave)}
+.menu a:hover{color:var(--escuro);background:var(--claro)}
+
+/* Primeira dobra: foto do técnico com camada escura por cima */
+.hero{position:relative;overflow:hidden;background:var(--escuro);color:#fff;min-height:600px;display:flex;align-items:center;padding:72px 0 88px}
+.hero-foto{position:absolute;inset:0}
+.hero-foto img{width:100%;height:100%;object-fit:cover;object-position:70% 40%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,36,26,.96) 0%,rgba(14,36,26,.88) 38%,rgba(14,36,26,.35) 75%,rgba(14,36,26,.2) 100%)}
+.hero-conteudo{z-index:2}
+.hero-local{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:.9375rem;color:#CFE0D5;margin-bottom:16px}
+.hero h1{font-size:clamp(2.5rem,1.3rem + 4.4vw,4.5rem);max-width:12ch}
+.hero h1 span{color:var(--amarelo)}
+.hero-lead{margin-top:20px;max-width:34rem;font-size:1.1875rem;color:#DCE8E0}
+.hero-acoes{margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px}
+.hero-nota{display:inline-flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;color:#fff;font-weight:500}
+.hero-nota b{font-weight:800}
+.estrelas{display:flex;gap:2px;color:var(--amarelo)}
+.estrelas svg{width:17px;height:17px}
+.estrelas .meia{clip-path:inset(0 50% 0 0)}
+.hero-pragas{list-style:none;margin:36px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.hero-pragas li{padding:6px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.06);font-size:.875rem;font-weight:600}
+.ilustrativa{position:absolute;right:16px;top:12px;z-index:2;font-size:.75rem;color:rgba(255,255,255,.75)}
+
+/* Faixa de confiança sobreposta ao fim da primeira dobra */
+.confianca{position:relative;z-index:3;margin-top:-44px}
+.confianca-grade{display:grid;grid-template-columns:repeat(3,1fr);background:#fff;border-radius:var(--raio);box-shadow:0 18px 40px -22px rgba(14,36,26,.45);border:1px solid var(--linha)}
+.confianca-item{display:flex;align-items:center;gap:14px;padding:22px 24px}
+.confianca-item + .confianca-item{border-left:1px solid var(--linha)}
+.confianca-ic{display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:12px;background:var(--escuro);color:var(--amarelo)}
+.confianca-ic svg{width:22px;height:22px}
+.confianca-item p{font-size:.875rem;color:var(--suave);line-height:1.4}
+.confianca-item b{display:block;font-size:1rem;color:var(--texto)}
+
+/* Seções */
+.secao{padding:88px 0}
+.secao-clara{background:var(--claro)}
+.secao h2,.pragas h2,.contato h2{font-size:clamp(1.875rem,1.3rem + 2vw,2.75rem);color:var(--escuro)}
+.centro{text-align:center}
+.cabeca{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;margin-bottom:36px}
+.aviso-confirmar{display:inline-block;padding:5px 12px;border-radius:999px;background:#FFF1C7;color:#4A3800;font-size:.8125rem;font-weight:700}
+
+.servicos{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.servico{display:flex;flex-direction:column;gap:10px;padding:26px 22px;border:1px solid var(--linha);border-radius:var(--raio);text-decoration:none;background:#fff;transition:border-color .2s,box-shadow .2s,transform .2s}
+.servico:hover{border-color:var(--zap);box-shadow:0 16px 30px -20px rgba(14,36,26,.5);transform:translateY(-2px)}
+.servico-ic{display:grid;place-items:center;width:52px;height:52px;border-radius:14px;background:var(--amarelo);color:var(--escuro);margin-bottom:6px}
+.servico-ic svg{width:28px;height:28px}
+.servico h3{font-size:1.25rem}
+.servico p{color:var(--suave);font-size:.9375rem}
+.servico-link{margin-top:auto;padding-top:8px;display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:.9375rem;color:var(--zap)}
+.servico-link svg{width:18px;height:18px;transition:transform .2s}
+.servico:hover .servico-link svg{transform:translateX(4px)}
+
+.ambientes{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.ambientes li{background:#fff;border-radius:var(--raio);overflow:hidden;border:1px solid var(--linha)}
+.ambientes img{width:100%;aspect-ratio:10/7;object-fit:cover}
+.ambientes div{padding:18px 20px 22px}
+.ambientes h3{font-size:1.125rem}
+.ambientes p{margin-top:6px;font-size:.9375rem;color:var(--suave)}
+.ilustrativa-nota{margin-top:14px;font-size:.8125rem;color:var(--suave)}
+
+/* Qual praga apareceu? */
+.pragas{background:var(--escuro);color:#fff;padding:72px 0}
+.pragas h2{color:#fff}
+.pragas-grade{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
+.pragas-grade > div p{margin-top:10px;color:#CFE0D5}
+.pragas-lista{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.pragas-lista a{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:56px;padding:12px 16px;border-radius:12px;background:var(--escuro-2);border:1px solid rgba(255,255,255,.12);text-decoration:none;font-weight:700;transition:background-color .2s,color .2s}
+.pragas-lista a:hover{background:var(--amarelo);color:var(--escuro)}
+.pragas-lista svg{width:18px;height:18px;flex:none}
+
+/* Documentação */
+.empresa-grade{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
+.empresa-foto{margin:0;position:relative}
+.empresa-foto img{width:100%;aspect-ratio:9/11;object-fit:cover;border-radius:var(--raio)}
+.empresa-foto figcaption{margin-top:8px;font-size:.8125rem;color:var(--suave)}
+.empresa-sub{margin-top:12px;color:var(--suave)}
+.docs{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.docs li{display:flex;gap:14px;align-items:flex-start;padding:18px;border:1px solid var(--linha);border-radius:var(--raio)}
+.docs-ic{display:grid;place-items:center;flex:none;width:42px;height:42px;border-radius:12px;background:#FFF1C7;color:#6B5000}
+.docs-ic svg{width:22px;height:22px}
+.docs b{display:block;color:var(--escuro)}
+.docs span:not(.docs-ic){font-size:.875rem;color:#6B5000;font-weight:600}
+
+/* Como pedir */
+.passos{list-style:none;counter-reset:passo;margin:44px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.passos li{counter-increment:passo;background:#fff;border-radius:var(--raio);padding:28px 24px;border:1px solid var(--linha);position:relative}
+.passos li::before{content:counter(passo);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--escuro);color:var(--amarelo);font-weight:800;font-size:1.125rem;margin-bottom:16px}
+.passos h3{font-size:1.25rem}
+.passos p{margin-top:6px;color:var(--suave)}
+
+/* Contato */
+.contato{padding:88px 0}
+.contato-grade{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:40px;align-items:start}
+.contato address{font-style:normal;margin-top:16px;font-size:1.125rem}
+.link-forte{display:flex;align-items:center;gap:8px;min-height:44px;margin-top:8px;font-weight:700;color:var(--zap);text-underline-offset:3px;flex-wrap:wrap}
+.link-forte svg{width:20px;height:20px;flex:none}
+.link-forte small{font-weight:500;color:var(--suave);width:100%;padding-left:28px;margin-top:-6px}
+.horario{width:100%;border-collapse:collapse;margin-top:6px}
+.horario caption{text-align:left;font-weight:700;color:var(--escuro);padding-bottom:10px}
+.horario th,.horario td{padding:12px 0;border-bottom:1px solid var(--linha);text-align:left}
+.horario th{font-weight:500}
+.horario td{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.contato-cta{background:var(--escuro);color:#fff;border-radius:var(--raio);padding:28px}
+.contato-cta p{font-weight:700;font-size:1.1875rem;line-height:1.35;margin-bottom:18px}
+.contato-cta .botao{width:100%}
+
+/* Rodapé escuro com colunas */
+.rodape{background:#091910;color:#BFD0C5;padding:56px 0 calc(48px + env(safe-area-inset-bottom,0px));font-size:.9375rem}
+.rodape-grade{display:grid;grid-template-columns:1.4fr 1fr 1.2fr;gap:32px}
+.rodape-marca{color:#fff;margin-bottom:6px}
+.rodape-marca b{color:var(--amarelo)}
+.rodape-titulo{font-weight:800;color:#fff;margin-bottom:10px}
+.rodape ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.rodape a{color:#fff;font-weight:700}
+
+/* No computador, o topo acompanha a rolagem logo abaixo da faixa */
+@media (min-width:761px){
+  .faixa-prototipo{height:var(--faixa);padding:0 16px;display:flex;align-items:center;justify-content:center}
+  .topo{position:sticky;top:var(--faixa);z-index:55}
+}
+
+.zap-fixo{display:none}
+
+/* ---------- Tablet ---------- */
+@media (max-width:1020px){
+  .servicos,.ambientes{grid-template-columns:repeat(2,1fr)}
+  .contato-grade{grid-template-columns:1fr 1fr}
+  .contato-cta{grid-column:1 / -1}
+}
+
+/* ---------- Celular ---------- */
+@media (max-width:760px){
+  html{scroll-padding-top:56px}
+  body{font-size:1rem}
+  .faixa-prototipo{font-size:.75rem;padding:6px 12px}
+  .menu,.some-no-celular{display:none}
+  .so-celular{display:inline}
+  .topo-linha{justify-content:space-between;min-height:60px}
+  .marca-icone{width:34px;height:34px}
+  .marca-nome{font-size:1.25rem}
+
+  .hero{min-height:0;padding:36px 0 76px}
+  .hero::after{background:linear-gradient(180deg,rgba(14,36,26,.78) 0%,rgba(14,36,26,.9) 55%,rgba(14,36,26,.97) 100%)}
+  .hero h1{font-size:2.5rem}
+  .hero-lead{font-size:1.0625rem;margin-top:14px}
+  .hero-acoes{margin-top:24px;gap:10px}
+  .hero-acoes .botao{width:100%}
+  .hero-nota{width:100%;justify-content:center}
+  .hero-pragas{margin-top:22px;gap:6px}
+  .hero-pragas li{font-size:.8125rem;padding:5px 12px}
+
+  .confianca{margin-top:-36px}
+  .confianca-grade{grid-template-columns:1fr}
+  .confianca-item{padding:14px 18px}
+  .confianca-item + .confianca-item{border-left:0;border-top:1px solid var(--linha)}
+
+  .secao,.contato{padding:52px 0}
+  .cabeca{margin-bottom:22px}
+  .servicos{grid-template-columns:1fr 1fr;gap:10px}
+  .servico{padding:16px 14px;gap:6px}
+  .servico-ic{width:42px;height:42px;margin-bottom:2px}
+  .servico-ic svg{width:22px;height:22px}
+  .servico h3{font-size:1.0625rem}
+  .servico p{font-size:.875rem}
+  .servico-link{font-size:.8125rem;white-space:nowrap}
+  .servico-link svg{width:15px;height:15px}
+
+  .ambientes{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:0 -16px;padding:0 16px 8px}
+  .ambientes li{flex:0 0 76%;scroll-snap-align:start}
+
+  .pragas{padding:48px 0}
+  .pragas-grade{grid-template-columns:1fr;gap:20px}
+  .pragas-lista{grid-template-columns:1fr 1fr;gap:8px}
+  .pragas-lista a{min-height:50px;padding:10px 14px}
+
+  .empresa-grade{grid-template-columns:1fr;gap:24px}
+  .empresa-foto{order:2}
+  .empresa-foto img{aspect-ratio:16/10}
+  .docs{grid-template-columns:1fr;gap:10px;margin-top:20px}
+  .docs li{padding:14px}
+
+  .passos{grid-template-columns:1fr;gap:12px;margin-top:24px}
+  .passos li{display:grid;grid-template-columns:44px 1fr;column-gap:14px;padding:18px}
+  .passos li::before{grid-row:span 2;margin:0}
+
+  .contato-grade{grid-template-columns:1fr;gap:28px}
+  .rodape{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+  .rodape-grade{grid-template-columns:1fr;gap:24px}
+
+  .zap-fixo{display:flex;align-items:center;justify-content:center;gap:10px;position:fixed;z-index:50;left:16px;right:16px;bottom:calc(14px + env(safe-area-inset-bottom,0px));min-height:54px;border-radius:999px;background:var(--zap);color:#fff;font-weight:700;text-decoration:none;box-shadow:0 12px 26px -10px rgba(9,25,16,.7);visibility:hidden;opacity:0;transform:translateY(140%);transition:transform .25s,opacity .25s,visibility 0s .25s}
+  .zap-fixo.visivel{visibility:visible;opacity:1;transform:none;transition:transform .25s,opacity .25s}
+}
+
+/* Animações sutis (só CSS); quem pediu "menos movimento" não vê nenhuma */
+@keyframes surgir{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes chegar{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:no-preference){
+  .hero-conteudo{animation:chegar .6s ease-out both}
+  @supports (animation-timeline:view()){
+    .cabeca,.servico,.ambientes li,.pragas-grade > *,.empresa-grade > *,.docs li,.passos li,.contato-grade > *{
+      animation:surgir linear both;animation-timeline:view();animation-range:entry 5% entry 40%}
+  }
+}
+@media (prefers-reduced-motion:reduce){.zap-fixo,.zap-fixo.visivel,.botao,.servico,.servico-link svg,.pragas-lista a{transition:none}}
+
+/* Página 404 */
+.erro{min-height:100vh;display:grid;align-items:center;padding:48px 0}
+.erro h1{font-size:clamp(2rem,1.4rem + 2.4vw,3rem);color:var(--escuro)}
+.erro p{margin-top:12px;color:var(--suave)}
+.erro .erro-acoes{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;margin-top:28px}
+.erro .link-forte{display:inline-flex}
