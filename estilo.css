@@ -39,6 +39,7 @@ h1 span{display:block}.l2{color:var(--a)}
 .sec-cab{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:12px 40px;padding:90px 0 34px}
 h2{font:800 clamp(2.8rem,6vw,5.2rem)/.9 Cond,sans-serif;text-transform:uppercase;position:relative}h2::before{content:"";display:block;width:56px;height:6px;background:var(--a);margin-bottom:18px}
 .sec-cab p{color:var(--m);max-width:44ch}
+.nota-pub{border-left:3px solid var(--a);padding:2px 0 2px 16px;margin-bottom:28px;color:var(--m);font-size:.98rem;max-width:62em}.nota-pub b{color:var(--t)}
 .k{color:var(--m);font-weight:600;font-size:.95rem;margin-bottom:8px}
 h3{font:800 clamp(2.4rem,4.2vw,4rem)/.95 Cond,sans-serif;text-transform:uppercase;margin-bottom:16px}
 .d{color:#cfc9bd}.s{display:flex;flex-wrap:wrap;gap:4px 16px;color:var(--m);font-size:.9rem;margin:16px 0 24px}.s li::before{content:"· ";color:var(--a)}
