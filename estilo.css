@@ -35,7 +35,6 @@ h1 span{display:block}.l2{color:var(--a)}
 .cl1{left:0;top:2%;z-index:3;transform:rotate(-3deg);box-shadow:12px 12px 0 var(--a),0 30px 60px -24px rgba(0,0,0,.8)}
 .cl2{right:0;top:22%;z-index:2;transform:rotate(2.5deg)}
 .cl3{left:12%;bottom:0;z-index:1;transform:rotate(-1deg)}
-.selo-h{position:absolute;right:2%;top:-2%;z-index:4;display:grid;place-items:center;width:112px;height:112px;border-radius:50%;background:var(--a);color:#fff;font:800 1.1rem/1.05 Cond,sans-serif;text-transform:uppercase;text-align:center;transform:rotate(12deg)}
 /* seções */
 .sec-cab{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:12px 40px;padding:90px 0 34px}
 h2{font:800 clamp(2.8rem,6vw,5.2rem)/.9 Cond,sans-serif;text-transform:uppercase;position:relative}h2::before{content:"";display:block;width:56px;height:6px;background:var(--a);margin-bottom:18px}
@@ -79,7 +78,7 @@ h3{font:800 clamp(2.4rem,4.2vw,4rem)/.95 Cond,sans-serif;text-transform:uppercas
 .rod .mini{font-weight:400;font-size:.85rem;opacity:.8;border-top:1px solid rgba(255,255,255,.35);padding-top:18px;margin:44px 0 0;max-width:none}
 .e404{padding:20vh 0}.e404 h1{font-size:clamp(3rem,10vw,8rem)}
 @media(max-width:1000px){.w{width:calc(100% - 32px)}nav{gap:16px;font-size:.9rem}nav a:not(.cv){display:none}.hero-g{grid-template-columns:1fr;gap:34px}.colagem{max-width:560px;width:100%;margin:10px auto 0}.dest{grid-template-columns:1fr;padding:22px;gap:26px}.dest .quadro{box-shadow:8px 8px 0 var(--a)}.proj,.proj.inv{grid-template-columns:1fr;gap:20px;padding:40px 0}.proj .quadro,.proj.inv .quadro{order:3}.passos{grid-template-columns:1fr 1fr}.sobre-g{grid-template-columns:1fr;gap:34px}.sec-cab{padding-top:64px}}
-@media(max-width:560px){.passos{grid-template-columns:1fr}.cta .bt{width:100%;justify-content:center}.selo-h{width:88px;height:88px;font-size:.9rem}.rod-l{font-size:1.4rem}}
+@media(max-width:560px){.passos{grid-template-columns:1fr}.cta .bt{width:100%;justify-content:center}.rod-l{font-size:1.4rem}}
 @media(prefers-reduced-motion:no-preference){
 .hero-t>*,.colagem{animation:sobe .9s var(--ease) both}
 .tag{animation-delay:.05s}.hero h1{animation-delay:.15s}.lead{animation-delay:.32s}.nums{animation-delay:.42s}.cta{animation-delay:.52s}.colagem{animation-delay:.3s}
