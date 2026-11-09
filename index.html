@@ -13,6 +13,8 @@
 <meta property="og:image" content="https://xandedev.pages.dev/og.png">
 <meta name="theme-color" content="#101011">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preload" href="fonts/barlow-condensed-800.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="estilo.css">
 <script src="comum.js" defer></script>
@@ -21,7 +23,7 @@
 <a class="pular" href="#projetos">Pular para os projetos</a>
 <header class="topo">
   <div class="w topo-in">
-    <a class="logo" href="#inicio" aria-label="Alexandre Martins, início"><span>AM</span></a>
+    <a class="logo" href="#inicio" aria-label="Alexandre Martins, início"><img src="favicon.svg" width="46" height="46" alt=""></a>
     <nav aria-label="Principal">
       <a href="#projetos">Projetos</a>
       <a href="#processo">Como trabalho</a>
@@ -32,117 +34,133 @@
 </header>
 
 <main id="inicio">
-<section class="hero w">
-  <p class="tag">Portfólio · Desenvolvimento web</p>
-  <h1><span class="l1">Alexandre</span> <span class="l2">Martins</span></h1>
-  <div class="intro">
-    <p class="lead">Faço sites e sistemas web para pequenos negócios, cada um com a identidade do ramo. Estudo Análise e Desenvolvimento de Sistemas e procuro meu primeiro estágio na área.</p>
-    <ul class="nums" aria-label="Em números">
-      <li><b>8</b><span>projetos</span></li>
-      <li><b>7</b><span>estilos visuais</span></li>
-      <li><b>1</b><span>sistema com banco de dados</span></li>
-    </ul>
+<section class="hero">
+  <div class="w hero-g">
+    <div class="hero-t">
+      <p class="tag">Portfólio · Desenvolvimento web</p>
+      <h1><span class="l1">Alexandre</span> <span class="l2">Martins</span></h1>
+      <p class="lead">Faço sites e sistemas web para pequenos negócios, cada um com a identidade do ramo. Estudo Análise e Desenvolvimento de Sistemas e busco estágio ou emprego como desenvolvedor.</p>
+      <ul class="nums" aria-label="Em números">
+        <li><b>8</b><span>projetos</span></li>
+        <li><b>7</b><span>estilos visuais</span></li>
+        <li><b>1</b><span>sistema com banco de dados</span></li>
+      </ul>
+      <div class="cta"><a class="bt" href="#projetos">Ver os projetos</a><a class="bt sec" href="mailto:xandemartinscosta@gmail.com">Falar comigo</a></div>
+    </div>
+    <div class="colagem" aria-hidden="true"><img class="cl cl1" src="img/cbm.webp" width="1100" height="859" alt="" fetchpriority="high"><img class="cl cl2" src="img/esportivo.webp" width="1100" height="859" alt=""><img class="cl cl3" src="img/hexagonos.webp" width="1100" height="859" alt=""><span class="selo-h">sites feitos<br>do zero</span></div>
   </div>
-  <div class="cta"><a class="bt" href="#projetos">Ver os projetos</a><a class="bt sec" href="mailto:xandemartinscosta@gmail.com">Falar comigo</a></div>
 </section>
 
-<div class="faixa" aria-hidden="true"><div class="faixa-in"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Java</span><span>SQL</span><span>PostgreSQL</span><span>Node.js</span><span>Git e GitHub</span><span>Cloudflare</span><span>Claude Code</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Java</span><span>SQL</span><span>PostgreSQL</span><span>Node.js</span><span>Git e GitHub</span><span>Cloudflare</span><span>Claude Code</span></div></div>
-
 <section class="w" id="projetos" aria-labelledby="t-proj">
-  <div class="sec-cab rv"><h2 id="t-proj">Projetos</h2><p>Um sistema completo e sete identidades visuais. Cada cópia de demonstração usa um negócio fictício.</p></div>
+  <div class="sec-cab rv"><h2 id="t-proj">Projetos</h2><p>Um sistema completo e sete identidades visuais. As demonstrações usam negócios fictícios; a CBM Parts e a Barbearia TZ são reais e autorizaram a exibição.</p></div>
   <article class="dest rv" id="cbm">
     <div class="dest-txt">
       <p class="k">Sistema web · em destaque</p>
       <h3>CBM Parts</h3>
-      <p class="d">O projeto mais completo do portfólio. O cliente busca a peça pelo veículo, pelo código ou pelo nome, filtra por linha, categoria e marca e abre a página da peça. Por trás, uma área de administrador com login cadastra e edita as peças num banco de dados.</p>
+      <p class="d">O projeto mais completo do portfólio, feito com autorização do dono. O cliente busca a peça pelo veículo, pelo código ou pelo nome, filtra por linha, categoria e marca e abre a página da peça. Por trás, uma área de administrador com login cadastra e edita as peças num banco de dados.</p>
       <ul class="pts"><li>Busca por veículo, código ou nome</li><li>Painel de administrador com login</li><li>Banco de dados SQL (Cloudflare D1)</li><li>Visual escuro e visual azul</li></ul>
+      <ul class="pal" aria-label="Cores do projeto"><li class="c-cbm-0"></li><li class="c-cbm-1"></li><li class="c-cbm-2"></li></ul>
       <ul class="s"><li>JavaScript</li><li>Cloudflare Pages Functions</li><li>SQL (D1)</li><li>Autenticação</li></ul>
       <a class="bt" href="https://cbm-parts-prototipo-xandedev.pages.dev" target="_blank" rel="noopener">Abrir o catálogo <span aria-hidden="true">→</span></a>
     </div>
-    <a class="foto" href="https://cbm-parts-prototipo-xandedev.pages.dev" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/cbm.webp" width="1100" height="859" alt=""></a>
+    <a class="quadro" href="https://cbm-parts-prototipo-xandedev.pages.dev" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="bar"><i></i><i></i><i></i></span><img src="img/cbm.webp" width="1100" height="859" alt=""></a>
   </article>
   
-<article class="proj rv" id="esportivo">
-  <div class="n" aria-hidden="true">02</div>
+<article class="proj rv " id="esportivo">
   <div class="txt">
+    <p class="n" aria-hidden="true">02</p>
     <p class="k">Landing page · Centro automotivo</p>
     <h3>Oficina esportiva</h3>
     <p class="d">Preto e vermelho, títulos largos em caixa alta, recortes em diagonal e uma listra animada que lembra a faixa de uma pista.</p>
+    <ul class="pal" aria-label="Cores do projeto"><li class="c-esportivo-0"></li><li class="c-esportivo-1"></li><li class="c-esportivo-2"></li></ul>
     <ul class="s"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Animações</li></ul>
     <a class="ver" href="projetos/alto-giro/">Ver o site <span aria-hidden="true">→</span></a>
+    
   </div>
-  <a class="foto" href="projetos/alto-giro/" tabindex="-1" aria-hidden="true"><img src="img/esportivo.webp" width="1100" height="859" alt="" loading="lazy"></a>
+  <a class="quadro" href="projetos/alto-giro/" tabindex="-1" aria-hidden="true"><span class="bar"><i></i><i></i><i></i></span><img src="img/esportivo.webp" width="1100" height="859" alt="" loading="lazy"></a>
 </article>
-<article class="proj rv" id="hexagonos">
-  <div class="n" aria-hidden="true">03</div>
+<article class="proj rv inv" id="hexagonos">
   <div class="txt">
+    <p class="n" aria-hidden="true">03</p>
     <p class="k">Landing page · Oficina mecânica</p>
     <h3>Escuro com hexágonos</h3>
     <p class="d">Colmeia de hexágonos no fundo, foto recortada em hexágono, números de serviço em hexágono e botões com corte diagonal.</p>
+    <ul class="pal" aria-label="Cores do projeto"><li class="c-hexagonos-0"></li><li class="c-hexagonos-1"></li><li class="c-hexagonos-2"></li><li class="c-hexagonos-3"></li></ul>
     <ul class="s"><li>HTML</li><li>CSS</li><li>SVG</li></ul>
     <a class="ver" href="projetos/turbocar/">Ver o site <span aria-hidden="true">→</span></a>
+    
   </div>
-  <a class="foto" href="projetos/turbocar/" tabindex="-1" aria-hidden="true"><img src="img/hexagonos.webp" width="1100" height="859" alt="" loading="lazy"></a>
+  <a class="quadro" href="projetos/turbocar/" tabindex="-1" aria-hidden="true"><span class="bar"><i></i><i></i><i></i></span><img src="img/hexagonos.webp" width="1100" height="859" alt="" loading="lazy"></a>
 </article>
-<article class="proj rv" id="servico">
-  <div class="n" aria-hidden="true">04</div>
+<article class="proj rv " id="servico">
   <div class="txt">
+    <p class="n" aria-hidden="true">04</p>
     <p class="k">Landing page · Dedetizadora</p>
     <h3>Serviço local com foto</h3>
     <p class="d">Cara de empresa de verdade: foto na primeira tela, título com a cidade em destaque, faixa de confiança e serviços com link de orçamento.</p>
+    <ul class="pal" aria-label="Cores do projeto"><li class="c-servico-0"></li><li class="c-servico-1"></li><li class="c-servico-2"></li></ul>
     <ul class="s"><li>HTML</li><li>CSS</li><li>SEO básico</li></ul>
     <a class="ver" href="projetos/dedetimax/">Ver o site <span aria-hidden="true">→</span></a>
+    
   </div>
-  <a class="foto" href="projetos/dedetimax/" tabindex="-1" aria-hidden="true"><img src="img/servico.webp" width="1100" height="859" alt="" loading="lazy"></a>
+  <a class="quadro" href="projetos/dedetimax/" tabindex="-1" aria-hidden="true"><span class="bar"><i></i><i></i><i></i></span><img src="img/servico.webp" width="1100" height="859" alt="" loading="lazy"></a>
 </article>
-<article class="proj rv" id="marca">
-  <div class="n" aria-hidden="true">05</div>
+<article class="proj rv inv" id="marca">
   <div class="txt">
+    <p class="n" aria-hidden="true">05</p>
     <p class="k">Landing page · Dedetizadora</p>
     <h3>Marca forte e colorida</h3>
     <p class="d">Violeta, lilás e amarelo, hexágonos como moldura das fotos, ondas e um escudo desenhado no logo.</p>
+    <ul class="pal" aria-label="Cores do projeto"><li class="c-marca-0"></li><li class="c-marca-1"></li><li class="c-marca-2"></li><li class="c-marca-3"></li></ul>
     <ul class="s"><li>HTML</li><li>CSS</li><li>SVG</li></ul>
     <a class="ver" href="projetos/lume-pragas/">Ver o site <span aria-hidden="true">→</span></a>
+    
   </div>
-  <a class="foto" href="projetos/lume-pragas/" tabindex="-1" aria-hidden="true"><img src="img/marca.webp" width="1100" height="859" alt="" loading="lazy"></a>
+  <a class="quadro" href="projetos/lume-pragas/" tabindex="-1" aria-hidden="true"><span class="bar"><i></i><i></i><i></i></span><img src="img/marca.webp" width="1100" height="859" alt="" loading="lazy"></a>
 </article>
-<article class="proj rv" id="barbearia">
-  <div class="n" aria-hidden="true">06</div>
+<article class="proj rv " id="barbearia">
   <div class="txt">
-    <p class="k">Landing page · Barbearia</p>
-    <h3>Barbearia clássica</h3>
-    <p class="d">Papel claro com moldura dupla, ornamentos e um poste de barbeiro. Uma das três direções visuais que fiz para o mesmo negócio.</p>
+    <p class="n" aria-hidden="true">06</p>
+    <p class="k">Landing page · Barbearia em São José da Lapa</p>
+    <h3>Barbearia TZ</h3>
+    <p class="d">Site feito com autorização do dono, em três direções visuais para o mesmo negócio: Tradição (papel claro e moldura dupla), Raio (listras de fachada) e Clube (fotos e títulos em versalete).</p>
+    <ul class="pal" aria-label="Cores do projeto"><li class="c-barbearia-0"></li><li class="c-barbearia-1"></li><li class="c-barbearia-2"></li></ul>
     <ul class="s"><li>HTML</li><li>CSS</li><li>Direção visual</li></ul>
-    <a class="ver" href="projetos/barbearia-tradicao/">Ver o site <span aria-hidden="true">→</span></a>
+    <a class="ver" href="https://barbearia-tz-tradicao-prototipo-xandedev.pages.dev" target="_blank" rel="noopener">Ver a versão Tradição <span aria-hidden="true">→</span></a>
+    <p class="outras">Outras versões: <a href="https://barbearia-tz-raio-prototipo-xandedev.pages.dev" target="_blank" rel="noopener">Raio</a> · <a href="https://barbearia-tz-clube-prototipo-xandedev.pages.dev" target="_blank" rel="noopener">Clube</a></p>
   </div>
-  <a class="foto" href="projetos/barbearia-tradicao/" tabindex="-1" aria-hidden="true"><img src="img/barbearia.webp" width="1100" height="859" alt="" loading="lazy"></a>
+  <a class="quadro" href="https://barbearia-tz-tradicao-prototipo-xandedev.pages.dev" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="bar"><i></i><i></i><i></i></span><img src="img/barbearia.webp" width="1100" height="859" alt="" loading="lazy"></a>
 </article>
-<article class="proj rv" id="kraft">
-  <div class="n" aria-hidden="true">07</div>
+<article class="proj rv inv" id="kraft">
   <div class="txt">
+    <p class="n" aria-hidden="true">07</p>
     <p class="k">Landing page · Papelaria e personalizados</p>
     <h3>Kraft e etiquetas</h3>
     <p class="d">Mesa de artesã: etiqueta de presente que balança, adesivos que colam ao carregar, fita colorida e fotos como polaroides.</p>
+    <ul class="pal" aria-label="Cores do projeto"><li class="c-kraft-0"></li><li class="c-kraft-1"></li><li class="c-kraft-2"></li></ul>
     <ul class="s"><li>HTML</li><li>CSS</li><li>Animações</li></ul>
     <a class="ver" href="projetos/papel-prosa/">Ver o site <span aria-hidden="true">→</span></a>
+    
   </div>
-  <a class="foto" href="projetos/papel-prosa/" tabindex="-1" aria-hidden="true"><img src="img/kraft.webp" width="1100" height="859" alt="" loading="lazy"></a>
+  <a class="quadro" href="projetos/papel-prosa/" tabindex="-1" aria-hidden="true"><span class="bar"><i></i><i></i><i></i></span><img src="img/kraft.webp" width="1100" height="859" alt="" loading="lazy"></a>
 </article>
-<article class="proj rv" id="elegante">
-  <div class="n" aria-hidden="true">08</div>
+<article class="proj rv " id="elegante">
   <div class="txt">
+    <p class="n" aria-hidden="true">08</p>
     <p class="k">Landing page · Salão de beleza</p>
     <h3>Elegante e claro</h3>
     <p class="d">Fundo claro, arcos e fios finos, letras com serifa e bastante respiro, com serviços, equipe e agendamento.</p>
+    <ul class="pal" aria-label="Cores do projeto"><li class="c-elegante-0"></li><li class="c-elegante-1"></li><li class="c-elegante-2"></li><li class="c-elegante-3"></li></ul>
     <ul class="s"><li>HTML</li><li>CSS</li><li>Tipografia</li></ul>
     <a class="ver" href="projetos/espaco-kiara/">Ver o site <span aria-hidden="true">→</span></a>
+    
   </div>
-  <a class="foto" href="projetos/espaco-kiara/" tabindex="-1" aria-hidden="true"><img src="img/elegante.webp" width="1100" height="859" alt="" loading="lazy"></a>
+  <a class="quadro" href="projetos/espaco-kiara/" tabindex="-1" aria-hidden="true"><span class="bar"><i></i><i></i><i></i></span><img src="img/elegante.webp" width="1100" height="859" alt="" loading="lazy"></a>
 </article>
 </section>
 
 <section class="w proc" id="processo" aria-labelledby="t-proc">
-  <div class="sec-cab rv"><h2 id="t-proc">Como eu trabalho</h2></div>
+  <div class="sec-cab rv"><h2 id="t-proc">Como eu trabalho</h2><p>Do primeiro contato com o negócio ao link no ar.</p></div>
   <ol class="passos">
     <li class="rv"><b>01</b><h3>Pesquisar</h3><p>Olho sites bons do mesmo ramo e o que o negócio já mostra no Google e no Instagram, sem copiar.</p></li>
     <li class="rv"><b>02</b><h3>Combinar a direção</h3><p>Apresento paleta, fontes e formas antes de construir o site inteiro.</p></li>
@@ -152,27 +170,42 @@
 </section>
 
 <section class="w sobre" id="sobre" aria-labelledby="t-sobre">
-  <div class="sec-cab rv"><h2 id="t-sobre">Sobre</h2></div>
+  <div class="sec-cab rv"><h2 id="t-sobre">Sobre</h2><p>São José da Lapa, Minas Gerais.</p></div>
   <div class="sobre-g rv">
-    <p>Sou de São José da Lapa (MG). Estudo Análise e Desenvolvimento de Sistemas na UNA e vim da Enfermagem, o que me deu rotina de responsabilidade e atenção a detalhe. Trabalhei com estoque e ERP (Sankhya) e fiz o curso técnico de Redes.</p>
-    <p>Aprendo programando: Java, SQL e modelagem de banco de dados na faculdade, e sites e sistemas web nos meus projetos. Uso o Claude Code como ferramenta de desenvolvimento. Eu decido o que construir, reviso o resultado e documento o que fiz.</p>
-    <ul class="fatos"><li><b>Formação</b>Análise e Desenvolvimento de Sistemas, UNA (previsão 2028)</li><li><b>Estudo</b>Java, SQL, PostgreSQL, Python</li><li><b>Idioma</b>Inglês avançado em leitura</li></ul>
+    <div class="sobre-t">
+      <p>Estudo Análise e Desenvolvimento de Sistemas na UNA e vim da Enfermagem, que me deu responsabilidade e atenção a detalhe. Trabalhei com estoque e ERP (Sankhya).</p>
+      <p>Aprendo programando: Java, SQL e modelagem de banco de dados na faculdade, e sites e sistemas web nos meus projetos. Uso a IA como ferramenta de engenharia, com o Claude Code: eu descrevo o problema, avalio o que ela propõe, itero junto e valido o resultado. Para mim, quase todo problema tem solução quando se sabe pedir e quando se trabalha em conjunto com a ferramenta.</p>
+      <ul class="fatos">
+        <li><b>Inglês</b>Fluente em leitura e compreensão; conversação avançada e plenamente funcional.</li>
+        <li><b>Curso</b><a href="https://cursos.alura.com.br/certificate/705ebd4b-5ab5-4fcc-b16f-a6c1dec37936" target="_blank" rel="noopener">Claude e Lovable: do problema ao protótipo funcional</a>, Alura, 6 h (prototipação, Claude Code, Lovable e noções de Figma).</li>
+        <li><b>Estudo</b>Java, SQL, PostgreSQL e Python.</li>
+      </ul>
+    </div>
+    <ol class="linha" aria-label="Trajetória">
+      <li><b>2023</b><span>Formado em Enfermagem pela FAMINAS, em Belo Horizonte</span></li>
+      <li><b>2025</b><span>Início do tecnólogo em Análise e Desenvolvimento de Sistemas, na UNA</span></li>
+      <li><b>2026</b><span>Primeiros sites para pequenos negócios e sistema web com painel e banco de dados</span></li>
+      <li><b>2026</b><span>Curso de Claude e Lovable, na Alura</span></li>
+      <li class="agora"><b>Agora</b><span>Em busca de estágio ou emprego como desenvolvedor</span></li>
+    </ol>
   </div>
 </section>
 </main>
 
 <footer class="rod" id="contato">
-  <div class="w">
-    <h2><a href="mailto:xandemartinscosta@gmail.com">Vamos conversar?</a></h2>
-    <p>Procuro estágio em desenvolvimento de software, desenvolvimento web ou TI.</p>
-    <div class="rod-l">
-      <a href="mailto:xandemartinscosta@gmail.com">xandemartinscosta@gmail.com</a>
-      <a href="https://www.linkedin.com/in/alexandre-martins-da-costa-883031313" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/xANDE-git" target="_blank" rel="noopener">GitHub</a>
-      <a href="curriculo-alexandre-martins.pdf" target="_blank" rel="noopener">Currículo em PDF</a>
+  <div class="w rod-g">
+    <div>
+      <h2>Vamos conversar?</h2>
+      <p>Busco estágio ou emprego em desenvolvimento web, desenvolvimento de software ou áreas equivalentes de TI.</p>
+      <a class="bt escuro" href="mailto:xandemartinscosta@gmail.com">xandemartinscosta@gmail.com</a>
     </div>
-    <p class="mini">Os sites de demonstração são projetos de portfólio: nomes, telefones, endereços e avaliações são fictícios. © Alexandre Martins da Costa</p>
+    <ul class="rod-l">
+      <li><a href="https://www.linkedin.com/in/alexandre-martins-da-costa-883031313" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/xANDE-git" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="curriculo-alexandre-martins.pdf" target="_blank" rel="noopener">Currículo em PDF</a></li>
+    </ul>
   </div>
+  <div class="w"><p class="mini">Nas demonstrações, nomes, telefones, endereços e avaliações são fictícios. © Alexandre Martins da Costa</p></div>
 </footer>
 </body>
 </html>
