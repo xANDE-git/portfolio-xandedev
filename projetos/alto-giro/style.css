@@ -201,3 +201,5 @@ h1,h2,h3{font-weight:700;letter-spacing:-.01em}
   .js-surge .surge-js{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
   .js-surge .surge-js.on{opacity:1;transform:none}
 }
+
+.voltar-pf{position:fixed;left:14px;bottom:14px;z-index:9999;background:#0b0b0c;color:#f1ece2;border:2px solid #e11d2d;padding:10px 15px;font:600 14px/1 Arial,Helvetica,sans-serif;text-decoration:none;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.45)}.voltar-pf:hover,.voltar-pf:focus-visible{background:#e11d2d;color:#fff}

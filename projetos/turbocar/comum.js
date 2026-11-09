@@ -1,6 +1,6 @@
 // Único JavaScript do site: monta os links do WhatsApp, controla o botão fixo no celular e a entrada das seções.
 
-const ZAP = "5531999990000";
+const ZAP = "5531900000000";
 const MENSAGEM = "Olá, Oficina Mecânica Turbocar! Vim pelo site e gostaria de pedir um orçamento.";
 
 // Todo link com data-zap vira um link do WhatsApp com a mensagem pronta.

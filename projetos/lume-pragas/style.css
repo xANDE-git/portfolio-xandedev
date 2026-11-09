@@ -383,3 +383,5 @@ img{max-width:100%;height:auto}
   .marca-texto .marca-nome{font-size:1.25rem}
   .marca-icone,.marca-icone svg{width:34px;height:38px}
 }
+
+.voltar-pf{position:fixed;left:14px;bottom:14px;z-index:9999;background:#0b0b0c;color:#f1ece2;border:2px solid #e11d2d;padding:10px 15px;font:600 14px/1 Arial,Helvetica,sans-serif;text-decoration:none;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.45)}.voltar-pf:hover,.voltar-pf:focus-visible{background:#e11d2d;color:#fff}
