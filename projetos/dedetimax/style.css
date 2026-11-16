@@ -275,4 +275,4 @@ img{max-width:100%;height:auto}
 .erro .erro-acoes{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;margin-top:28px}
 .erro .link-forte{display:inline-flex}
 
-.voltar-pf{position:fixed;left:14px;bottom:14px;z-index:9999;background:#0b0b0c;color:#f1ece2;border:2px solid #e11d2d;padding:10px 15px;font:600 14px/1 Arial,Helvetica,sans-serif;text-decoration:none;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.45)}.voltar-pf:hover,.voltar-pf:focus-visible{background:#e11d2d;color:#fff}
+.voltar-pf{position:fixed;left:14px;bottom:14px;z-index:9999;background:#0E0F0C;color:#ECEBE4;border:2px solid #D8F27B;padding:10px 15px;font:600 14px/1 Arial,Helvetica,sans-serif;text-decoration:none;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.45)}.voltar-pf:hover,.voltar-pf:focus-visible{background:#D8F27B;color:#0E0F0C}
