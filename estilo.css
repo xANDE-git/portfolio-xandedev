@@ -203,3 +203,20 @@ nav a:hover{color:var(--a)}
 @media(prefers-reduced-motion:no-preference){.pt h3{transition:transform .3s var(--e),color .3s var(--e)}}
 @media(hover:hover){.pt:hover h3{color:var(--a)}}
 .cont h2::after{background:var(--f)}
+
+/* tema B: além do lima, a página alterna superfícies: escuro, oliva, claro, lima */
+:root{--o:#171B0F;--cl:#ECEBE4;--clm:#5C5E55;--cll:#CFCDC1}
+#processo,.sobre{position:relative;padding-bottom:64px;box-shadow:0 0 0 100vmax var(--bg);clip-path:inset(0 -100vmax);background:var(--bg)}
+#processo{--bg:var(--o);margin-top:64px}
+#processo .col li{border-top-color:#2C3220}
+.sobre{--bg:var(--cl);color:var(--f)}
+.sobre .apg,.sobre dt,.sobre .anos span{color:var(--clm)}
+.sobre h2::after{background:var(--f)}
+.sobre .fts div,.sobre .anos li,.sobre .crs li{border-color:var(--cll)}
+.sobre .fts a,.sobre .crs summary,.sobre .crs a{text-decoration-color:var(--f)}
+.sobre .crs summary:hover,.sobre .fts a:hover,.sobre .crs a:hover{background:var(--a)}
+@supports (-webkit-text-stroke:1px #000){.sobre .anos b{-webkit-text-stroke-color:var(--f)}}
+.sobre .anos li:last-child b{color:var(--f);background:var(--a);padding:0 .08em}
+.sobre :focus-visible{outline-color:var(--f)}
+.cont{margin-top:0}
+@media(min-width:1000px){#processo,.sobre{padding-bottom:104px}#processo{margin-top:104px}.cont{margin-top:0}}
