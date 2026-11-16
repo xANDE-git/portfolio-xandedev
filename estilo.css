@@ -28,7 +28,7 @@ nav a{text-decoration:none;padding-block:8px;text-underline-offset:6px}nav a:hov
 @supports (font-size:1cqw){.ln{font-size:calc(100cqw*var(--k))}}
 .ln>span{display:block}
 .l1{font-stretch:var(--s1)}.l2{font-stretch:var(--s2)}
-.nome b{font-weight:900;color:var(--a)}
+.nome b{font-weight:900;color:var(--a);margin-inline:.028em}
 .hero-g{display:grid;gap:40px}
 .frase{font-size:22px;line-height:1.25;font-weight:600;max-width:24em}
 .apg{color:var(--m)}
