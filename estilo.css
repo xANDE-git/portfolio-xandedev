@@ -220,3 +220,34 @@ nav a:hover{color:var(--a)}
 .sobre :focus-visible{outline-color:var(--f)}
 .cont{margin-top:0}
 @media(min-width:1000px){#processo,.sobre{padding-bottom:104px}#processo{margin-top:104px}.cont{margin-top:0}}
+
+/* como eu trabalho: três blocos numerados, cada um numa superfície (escura, lima, clara) */
+.esc{counter-reset:c}
+.col{--ink:var(--a);--linha:#33362C;--bar:var(--a);border-top:0;padding:24px 24px 16px;background:#1B1D17;clip-path:polygon(0 0,calc(100% - 24px) 0,100% 24px,100% 100%,0 100%)}
+.col:nth-child(2){--ink:var(--f);--linha:#B2C962;--bar:var(--f);background:var(--a);color:var(--f)}
+.col:nth-child(3){--ink:var(--f);--linha:#CFCDC1;--bar:var(--f);background:var(--t);color:var(--f)}
+.col::before{counter-increment:c;content:"0" counter(c);display:block;font-weight:900;font-stretch:68%;font-size:clamp(72px,8vw,128px);line-height:.8;margin-bottom:24px;color:var(--ink)}
+@supports (-webkit-text-stroke:1px #000){.col:nth-child(odd)::before{color:transparent;-webkit-text-stroke:1.5px var(--ink)}}
+.col h3::before{content:none}
+.col li,#processo .col li{position:relative;padding-left:24px;border-top-color:var(--linha)}
+.col li::before{content:"/";position:absolute;left:0;color:var(--bar);font-weight:600}
+
+/* movimento extra: só transform e opacity, tudo desligado com "reduzir movimento" */
+@media(prefers-reduced-motion:no-preference){
+  @keyframes xis{from{opacity:0;transform:rotate(-90deg) scale(.6)}to{opacity:1;transform:none}}
+  @keyframes perna{from{opacity:0;transform:translateY(60px)}to{opacity:1;transform:none}}
+  @keyframes quica{50%{transform:translateY(5px)}}
+  @keyframes deriva{from{transform:translateY(-50%)}to{transform:translateY(-45%) rotate(3deg)}}
+  .nome b{display:inline-block;animation:xis 1s var(--e) .55s both}
+  .x2{transform-box:fill-box;transition:transform .3s var(--e)}
+  .marca .x2{animation:perna .8s var(--e) .3s backwards}
+  .marca:hover .x2{transform:translateY(-10px)}
+  .cta .lk .st{animation:quica 1.8s ease-in-out infinite}
+  .xg{animation:deriva 14s ease-in-out infinite alternate}
+  .js .cab h2::after{transform:scale(0) rotate(-90deg);transition:transform .6s var(--e) .35s}
+  .js .cab.on h2::after{transform:none}
+  .js .esc .col:nth-child(2){transition-delay:.12s}.js .esc .col:nth-child(3){transition-delay:.24s}
+  .js .anos li:nth-child(2){transition-delay:.08s}.js .anos li:nth-child(3){transition-delay:.16s}.js .anos li:nth-child(4){transition-delay:.24s}
+  .pt-f i{transition:transform .3s var(--e)}
+  @media(hover:hover){.pt:hover .pt-f i{transform:translateX(6px)}}
+}
