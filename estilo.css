@@ -234,3 +234,5 @@ nav a:hover{color:var(--a)}
   .pt-f i{transition:transform .3s var(--e)}
   @media(hover:hover){.pt:hover .pt-f i{transform:translateX(6px)}}
 }
+.col:nth-child(3){--ink:var(--a);--linha:#46522A;--bar:var(--a);background:#2B3416;color:var(--t)}
+.col:nth-child(3)::before{color:var(--a);-webkit-text-stroke:0}
