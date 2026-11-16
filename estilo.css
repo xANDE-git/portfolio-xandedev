@@ -81,7 +81,9 @@ dt{color:var(--m);font-size:15px;font-weight:600;margin-bottom:8px}
 .pt h3{font-size:40px}
 .pt h3 a{text-decoration:none}.pt h3 a::after{content:"";position:absolute;inset:0;z-index:2}
 .pt-n p{color:var(--m);font-size:17px;margin-top:8px}
-.pt-d{color:var(--m);font-size:17px;max-width:56ch}.pt-d b{color:var(--t);font-weight:600}
+.pt-d{display:grid;gap:8px;font-size:17px;max-width:56ch}.pt-d p:first-child{color:var(--m)}
+.pt-f{display:grid;grid-template-columns:auto 1fr;gap:8px}.pt-f i{color:var(--a);font-style:normal;font-weight:600}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 .pt-i{display:flex;gap:8px;align-items:stretch}
 .pt-i .pc{flex:0 0 76%;aspect-ratio:16/10;--corte:16px}.pt-i .cel{flex:1;--corte:8px}
 .pt-s{font-weight:600}
@@ -184,3 +186,20 @@ dt{color:var(--m);font-size:15px;font-weight:600;margin-bottom:8px}
     .pt:hover h3{transform:translateX(8px)}
   }
 }
+
+/* tema: o lima da marca espalhado em pontos fixos (títulos, divisórias, números, setas, anos) */
+::selection{background:var(--a);color:var(--f)}
+h2::after{content:"";display:inline-block;width:.16em;height:.16em;margin-left:.05em;background:var(--a);clip-path:polygon(0 0,60% 0,100% 40%,100% 100%,0 100%)}
+.grp,.col{border-top-color:var(--a)}
+.idx{color:var(--a)}
+.sit i{background:var(--a)}
+.pt-s,.lk .st{color:var(--a)}
+.lk,.fts a,.crs summary,.crs a,.outras a{text-decoration-color:var(--a)}
+nav a:hover{color:var(--a)}
+.col h3::before{content:"/ ";color:var(--a)}
+@supports (-webkit-text-stroke:1px #000){.anos b{-webkit-text-stroke-color:var(--a)}}
+.anos li:last-child b{color:var(--a);-webkit-text-stroke-color:transparent}
+.rod-n{color:#1E2117}
+@media(prefers-reduced-motion:no-preference){.pt h3{transition:transform .3s var(--e),color .3s var(--e)}}
+@media(hover:hover){.pt:hover h3{color:var(--a)}}
+.cont h2::after{background:var(--f)}
