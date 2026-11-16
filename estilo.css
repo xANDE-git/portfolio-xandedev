@@ -81,7 +81,9 @@ dt{color:var(--m);font-size:15px;font-weight:600;margin-bottom:8px}
 .pt h3{font-size:40px}
 .pt h3 a{text-decoration:none}.pt h3 a::after{content:"";position:absolute;inset:0;z-index:2}
 .pt-n p{color:var(--m);font-size:17px;margin-top:8px}
-.pt-d{color:var(--m);font-size:17px;max-width:56ch}.pt-d b{color:var(--t);font-weight:600}
+.pt-d{display:grid;gap:8px;font-size:17px;max-width:56ch}.pt-d p:first-child{color:var(--m)}
+.pt-f{display:grid;grid-template-columns:auto 1fr;gap:8px}.pt-f i{color:var(--a);font-style:normal;font-weight:600}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 .pt-i{display:flex;gap:8px;align-items:stretch}
 .pt-i .pc{flex:0 0 76%;aspect-ratio:16/10;--corte:16px}.pt-i .cel{flex:1;--corte:8px}
 .pt-s{font-weight:600}
@@ -184,3 +186,53 @@ dt{color:var(--m);font-size:15px;font-weight:600;margin-bottom:8px}
     .pt:hover h3{transform:translateX(8px)}
   }
 }
+
+/* tema: o lima da marca espalhado em pontos fixos (títulos, divisórias, números, setas, anos) */
+::selection{background:var(--a);color:var(--f)}
+h2::after{content:"";display:inline-block;width:.16em;height:.16em;margin-left:.05em;background:var(--a);clip-path:polygon(0 0,60% 0,100% 40%,100% 100%,0 100%)}
+.grp,.col{border-top-color:var(--a)}
+.idx{color:var(--a)}
+.sit i{background:var(--a)}
+.pt-s,.lk .st{color:var(--a)}
+.lk,.fts a,.crs summary,.crs a,.outras a{text-decoration-color:var(--a)}
+nav a:hover{color:var(--a)}
+.col h3::before{content:"/ ";color:var(--a)}
+@supports (-webkit-text-stroke:1px #000){.anos b{-webkit-text-stroke-color:var(--a)}}
+.anos li:last-child b{color:var(--a);-webkit-text-stroke-color:transparent}
+.rod-n{color:#1E2117}
+@media(prefers-reduced-motion:no-preference){.pt h3{transition:transform .3s var(--e),color .3s var(--e)}}
+@media(hover:hover){.pt:hover h3{color:var(--a)}}
+.cont h2::after{background:var(--f)}
+
+/* como eu trabalho: três blocos numerados, cada um numa superfície (escura, lima, clara) */
+.esc{counter-reset:c}
+.col{--ink:var(--a);--linha:#33362C;--bar:var(--a);border-top:0;padding:24px 24px 16px;background:#1B1D17;clip-path:polygon(0 0,calc(100% - 24px) 0,100% 24px,100% 100%,0 100%)}
+.col:nth-child(2){--ink:var(--f);--linha:#B2C962;--bar:var(--f);background:var(--a);color:var(--f)}
+.col:nth-child(3){--ink:var(--f);--linha:#CFCDC1;--bar:var(--f);background:var(--t);color:var(--f)}
+.col::before{counter-increment:c;content:"0" counter(c);display:block;font-weight:900;font-stretch:68%;font-size:clamp(72px,8vw,128px);line-height:.8;margin-bottom:24px;color:var(--ink)}
+@supports (-webkit-text-stroke:1px #000){.col:nth-child(odd)::before{color:transparent;-webkit-text-stroke:1.5px var(--ink)}}
+.col h3::before{content:none}
+.col li,#processo .col li{position:relative;padding-left:24px;border-top-color:var(--linha)}
+.col li::before{content:"/";position:absolute;left:0;color:var(--bar);font-weight:600}
+
+/* movimento extra: só transform e opacity, tudo desligado com "reduzir movimento" */
+@media(prefers-reduced-motion:no-preference){
+  @keyframes xis{from{opacity:0;transform:rotate(-90deg) scale(.6)}to{opacity:1;transform:none}}
+  @keyframes perna{from{opacity:0;transform:translateY(60px)}to{opacity:1;transform:none}}
+  @keyframes quica{50%{transform:translateY(5px)}}
+  @keyframes deriva{from{transform:translateY(-50%)}to{transform:translateY(-45%) rotate(3deg)}}
+  .nome b{display:inline-block;animation:xis 1s var(--e) .55s both}
+  .x2{transform-box:fill-box;transition:transform .3s var(--e)}
+  .marca .x2{animation:perna .8s var(--e) .3s backwards}
+  .marca:hover .x2{transform:translateY(-10px)}
+  .cta .lk .st{animation:quica 1.8s ease-in-out infinite}
+  .xg{animation:deriva 14s ease-in-out infinite alternate}
+  .js .cab h2::after{transform:scale(0) rotate(-90deg);transition:transform .6s var(--e) .35s}
+  .js .cab.on h2::after{transform:none}
+  .js .esc .col:nth-child(2){transition-delay:.12s}.js .esc .col:nth-child(3){transition-delay:.24s}
+  .js .anos li:nth-child(2){transition-delay:.08s}.js .anos li:nth-child(3){transition-delay:.16s}.js .anos li:nth-child(4){transition-delay:.24s}
+  .pt-f i{transition:transform .3s var(--e)}
+  @media(hover:hover){.pt:hover .pt-f i{transform:translateX(6px)}}
+}
+.col:nth-child(3){--ink:var(--a);--linha:#46522A;--bar:var(--a);background:#2B3416;color:var(--t)}
+.col:nth-child(3)::before{color:var(--a);-webkit-text-stroke:0}
