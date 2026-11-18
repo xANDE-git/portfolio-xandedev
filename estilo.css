@@ -146,7 +146,7 @@ dt{color:var(--m);font-size:15px;font-weight:600;margin-bottom:8px}
   .sec{padding-top:104px}
   .cab{grid-template-columns:1fr auto;gap:40px}
   .grp,.cli,.pt,.sobre-g,.cont-g{grid-template-columns:repeat(12,1fr);gap:24px}
-  .grp h3{grid-column:1/span 4}.grp p{grid-column:5/span 6}
+  .grp h3{grid-column:1/span 3}.grp p{grid-column:4/span 7}
   .grp2{margin-top:104px}
   .cli{padding:64px 0 104px;align-items:start}
   .cli-t{grid-column:1/span 5}.cli-p{order:0;grid-column:6/span 7;padding:0 0 104px 40px}
@@ -256,3 +256,10 @@ nav a:hover{color:var(--a)}
   .crs.fechando li:nth-child(1){animation-delay:.09s}.crs.fechando li:nth-child(2){animation-delay:.06s}.crs.fechando li:nth-child(3){animation-delay:.03s}
 }
 @media(hover:hover){.bt:hover{color:var(--a)}.bt.inv:hover{color:var(--f)}.bt:hover::before{transform:scaleX(1)}}
+
+/* botão: seta sempre visível; no hover enche de off-white (continua com cara de botão em fundo escuro e em fundo lima) */
+.bt::after{content:"↗";margin-left:12px}
+.bt::before,.bt.inv::before{background:var(--t)}
+@media(prefers-reduced-motion:no-preference){.bt::after{transition:transform .3s var(--e)}.bt:hover::after{transform:translate(3px,-3px)}}
+@media(hover:hover){.bt:hover,.bt.inv:hover{color:var(--f)}}
+.crs.fechando li:nth-child(n){animation-delay:.09s}.crs.fechando li:nth-last-child(1){animation-delay:0s}.crs.fechando li:nth-last-child(2){animation-delay:.03s}.crs.fechando li:nth-last-child(3){animation-delay:.06s}
