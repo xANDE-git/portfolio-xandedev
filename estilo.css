@@ -271,12 +271,12 @@ nav a:hover{color:var(--a)}
 nav{gap:8px}
 nav a{padding:14px 12px;text-decoration:none;background:linear-gradient(var(--a),var(--a)) no-repeat 12px calc(100% - 8px)/0 2px}
 nav a:hover,nav a:focus-visible{text-decoration:none;color:var(--t);background-size:calc(100% - 24px) 2px}
-.cont-l a span:last-child{background:linear-gradient(var(--f),var(--f)) no-repeat 0 100%/0 2px;padding-bottom:2px}
-.cont-l a:hover span:last-child,.cont-l a:focus-visible span:last-child{background-size:100% 2px}
+.cont-l .tl{background:linear-gradient(var(--f),var(--f)) no-repeat 0 100%/0 2px;padding-bottom:2px}
+.cont-l a:hover .tl,.cont-l a:focus-visible .tl{background-size:100% 2px}
 .cont-l a:hover{text-decoration:none}
 @media(prefers-reduced-motion:no-preference){
   html{scroll-behavior:smooth}
-  nav a,.cont-l a span:last-child{transition:background-size .35s var(--e)}
+  nav a,.cont-l .tl{transition:background-size .35s var(--e)}
   /* hover dos clientes: só quando o mouse está no print; print e celular usam o mesmo tempo e a mesma curva */
   .qd img,.cli-p .cel{transition:transform .6s var(--e)}
   .qd img{will-change:transform;backface-visibility:hidden}
@@ -290,3 +290,19 @@ nav a:hover,nav a:focus-visible{text-decoration:none;color:var(--t);background-s
   .xg{animation-duration:48s;animation-timing-function:ease-in-out;will-change:transform}
 }
 html{scroll-padding-top:8px}
+
+/* página do recrutador: Tecnologias em linhas grandes (número, título gigante, lista); Como eu trabalho segue em cards */
+#tecnologias .col{--bar:var(--a);--linha:#2B2D26;background:none;clip-path:none;padding:32px 0;border-top:1px solid #33362C;color:var(--t);position:static;isolation:auto;margin-top:0}
+#tecnologias .col:last-child{border-bottom:1px solid #33362C}
+#tecnologias .col::after{display:none}
+#tecnologias .col::before{color:var(--a);-webkit-text-stroke:0;font-size:clamp(32px,4vw,64px);margin-bottom:8px}
+#tecnologias .col h3{font-size:clamp(40px,10vw,80px);font-stretch:68%;text-transform:uppercase;line-height:.9;margin-bottom:24px}
+#tecnologias .col li{border-top:0;padding-bottom:14px}
+@media(min-width:1000px){
+  #tecnologias .esc{grid-template-columns:1fr;gap:0}
+  #tecnologias .col{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:start;padding:40px 0}
+  #tecnologias .col::before{grid-column:1;margin:0}
+  #tecnologias .col h3{grid-column:2/span 4;margin:0}
+  #tecnologias .col ul{grid-column:7/span 6}
+}
+#t-tec{font-size:clamp(44px,11vw,168px)}
