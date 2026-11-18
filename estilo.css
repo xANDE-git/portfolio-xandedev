@@ -219,10 +219,10 @@ nav a:hover{color:var(--a)}
 
 /* movimento extra: só transform e opacity, tudo desligado com "reduzir movimento" */
 @media(prefers-reduced-motion:no-preference){
-  @keyframes xis{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  @keyframes xis{from{opacity:0;transform:translateY(28px) rotate(-30deg) scale(.8)}to{opacity:1;transform:none}}
   @keyframes perna{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
   @keyframes deriva{from{transform:translateY(-50%)}to{transform:translateY(-47%)}}
-  .nome b{display:inline-block;animation:xis .7s var(--e) .5s both}
+  .nome b{display:inline-block;animation:xis .9s var(--e) .5s both}
   .x2{transform-box:fill-box;transition:transform .3s var(--e)}
   .marca .x2{animation:perna .6s var(--e) .25s backwards}
   .marca:hover .x2{transform:translateY(-3px)}
