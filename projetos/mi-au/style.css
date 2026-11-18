@@ -229,5 +229,5 @@ a.confianca-item:hover b{text-decoration:underline}
   .rodape-grade{grid-template-columns:1fr;gap:24px}
   .rodape .botao{width:100%}
 }
-.xm-logo{display:flex;justify-content:center;width:fit-content;margin:0 auto;padding:14px 12px 4px;color:inherit;opacity:.32;transition:opacity .2s}.xm-logo:hover,.xm-logo:focus-visible{opacity:.85}
+.xm-logo{display:flex;flex-direction:column;align-items:flex-end;gap:5px;width:fit-content;margin:0 0 0 auto;padding:16px 18px 12px;color:inherit;opacity:.6;font-size:12px;font-weight:500;line-height:1.2;font-family:inherit;letter-spacing:.01em;text-decoration:none;transition:opacity .2s}.xm-logo:hover,.xm-logo:focus-visible{opacity:1}
 .voltar-pf{position:fixed;left:14px;bottom:14px;z-index:9999;background:#0E0F0C;color:#ECEBE4;border:2px solid #D8F27B;padding:10px 15px;font:600 14px/1 Arial,Helvetica,sans-serif;text-decoration:none;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.45)}.voltar-pf:hover,.voltar-pf:focus-visible{background:#D8F27B;color:#0E0F0C}
