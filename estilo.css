@@ -175,7 +175,7 @@ dt{color:var(--m);font-size:15px;font-weight:600;margin-bottom:8px}
   .js .rv.on{opacity:1;transform:none}
   .bt,.st,.pt h3,.pt-i,.cli-p .cel{transition:transform .3s var(--e)}
   .qd img{transition:transform .8s var(--e)}
-  .bt:hover{transform:translateY(-2px)}
+  
   a:hover .st,.pt:hover .st{transform:translate(3px,-3px)}
   @media(hover:hover) and (min-width:1000px){
     .cli:hover .pc img{transform:scale(1.03)}
@@ -244,3 +244,15 @@ nav a:hover{color:var(--a)}
   .crs[open] li:nth-child(2){animation-delay:.05s}.crs[open] li:nth-child(3){animation-delay:.1s}.crs[open] li:nth-child(4){animation-delay:.15s}.crs[open] li:nth-child(n+5){animation-delay:.2s}
   .crs summary{transition:transform .2s var(--e)}.crs summary:active{transform:scale(.97)}
 }
+
+/* botões: o preenchimento troca de cor por dentro, texto e botão se mexem juntos */
+.bt{position:relative;isolation:isolate;overflow:hidden}
+.bt::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--f);transform:scaleX(0);transform-origin:left}
+.bt.inv::before{background:var(--a)}
+@media(prefers-reduced-motion:no-preference){
+  .bt{transition:color .3s var(--e)}.bt::before{transition:transform .35s var(--e)}
+  @keyframes fecha{to{opacity:0;transform:translateY(-6px)}}
+  .crs.fechando li{animation:fecha .22s var(--e) both}
+  .crs.fechando li:nth-child(1){animation-delay:.09s}.crs.fechando li:nth-child(2){animation-delay:.06s}.crs.fechando li:nth-child(3){animation-delay:.03s}
+}
+@media(hover:hover){.bt:hover{color:var(--a)}.bt.inv:hover{color:var(--f)}.bt:hover::before{transform:scaleX(1)}}

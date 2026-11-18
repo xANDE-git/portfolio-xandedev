@@ -9,3 +9,15 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
   itens.forEach(function (e) { io.observe(e); });
 })();
+
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.querySelectorAll('.crs').forEach(function (d) {
+    d.querySelector('summary').addEventListener('click', function (ev) {
+      if (!d.open || d.classList.contains('fechando')) return;
+      ev.preventDefault();
+      d.classList.add('fechando');
+      setTimeout(function () { d.open = false; d.classList.remove('fechando'); }, 330);
+    });
+  });
+})();
