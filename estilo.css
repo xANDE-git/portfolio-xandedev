@@ -306,3 +306,7 @@ html{scroll-padding-top:8px}
   #tecnologias .col ul{grid-column:7/span 6}
 }
 #t-tec{font-size:clamp(44px,11vw,168px)}
+
+/* menu acima do nome gigante: o texto do nome invadia a área dos links e roubava o mouse */
+.topo{position:relative;z-index:5;padding-top:16px;padding-bottom:20px}
+.nome{pointer-events:none;user-select:none}
