@@ -1,0 +1,233 @@
+/* Miau.Au — identidade: acolhedora, de bairro, alegre sem ser infantil.
+   Creme + laranja-tangerina + menta + amarelo-manteiga, texto marrom-café.
+   Títulos em Fredoka (arredondada), texto em Nunito.
+   Formas: cantos bem arredondados (28px), "bolha" na foto e o ponto do nome como marca. */
+
+@font-face{font-family:"Fredoka";src:url("fonts/fredoka.woff2") format("woff2");font-weight:500 700;font-display:swap}
+@font-face{font-family:"Nunito";src:url("fonts/nunito.woff2") format("woff2");font-weight:400 800;font-display:swap}
+
+:root{
+  --creme:#FFF6EA;
+  --creme-2:#FCEBD5;
+  --cafe:#2B1B17;
+  --suave:#6B4F45;
+  --laranja:#B9461A;      /* botões: texto branco com contraste AA */
+  --laranja-hover:#9C3912;
+  --laranja-vivo:#F07A3E; /* só decoração (o ponto do nome, a pata) */
+  --menta:#CDEEDD;
+  --menta-escura:#1F5C45;
+  --manteiga:#FFE29A;
+  --linha:#EAD6BF;
+  --foco:#1F5C45;
+  --raio:14px;
+  --caixa:1100px;
+  --faixa:36px;
+  --titulo:"Fredoka","Trebuchet MS",system-ui,sans-serif;
+  --corpo:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:110px;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--creme);color:var(--cafe);font:500 1.0625rem/1.6 var(--corpo)}
+h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.1;margin:0;text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+svg{display:block}
+.sprite{display:none}
+.ic{width:1.25em;height:1.25em;flex:none}
+.caixa{width:min(100% - 32px,var(--caixa));margin-inline:auto}
+:focus-visible{outline:3px solid var(--foco);outline-offset:3px;border-radius:10px}
+
+.pular{position:absolute;left:16px;top:-60px;z-index:100;background:#fff;color:var(--cafe);padding:10px 14px;border-radius:12px;font-weight:800}
+.pular:focus{top:8px}
+
+/* Faixa de protótipo (sai na versão final) */
+.faixa-prototipo{position:sticky;top:0;z-index:60;background:var(--cafe);color:#FCEBD5;font-size:.8125rem;line-height:1.35;text-align:center;padding:8px 16px}
+
+/* Botões */
+.botao{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:50px;padding:12px 24px;border-radius:999px;background:var(--laranja);color:#fff;font:800 1rem/1.2 var(--corpo);text-decoration:none;box-shadow:0 4px 0 #7A2D0E;transition:transform .12s,box-shadow .12s,background-color .12s}
+.botao:hover{background:var(--laranja-hover)}
+.botao:active{transform:translateY(3px);box-shadow:0 1px 0 #7A2D0E}
+.botao-pequeno{min-height:44px;padding:9px 18px;font-size:.9375rem}
+.so-celular{display:none}
+
+/* Topo */
+.topo{background:var(--creme)}
+.topo-linha{display:flex;align-items:center;gap:24px;min-height:76px}
+.marca{font-family:var(--titulo);font-weight:700;font-size:1.75rem;text-decoration:none;letter-spacing:-.01em}
+.ponto{color:var(--laranja-vivo)}
+.menu{display:flex;gap:2px;margin-left:auto}
+.menu a{text-decoration:none;font-weight:700;padding:10px 14px;border-radius:999px}
+.menu a:hover{background:var(--creme-2)}
+
+/* Seções */
+.secao{padding:80px 0}
+.secao h2{font-size:clamp(1.875rem,1.4rem + 1.8vw,2.75rem)}
+.cabeca{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px 20px}
+.aviso-confirmar{padding:4px 12px;border-radius:999px;background:var(--manteiga);font-size:.875rem;font-weight:800}
+
+
+/* Como agendar: passos em balões de conversa */
+.secao-menta{background:var(--menta);color:#173F31}
+.agendar-grade{display:grid;grid-template-columns:.8fr 1.2fr;gap:20px 56px;align-items:start}
+.agendar-sub{margin-top:12px;font-size:1.125rem}
+.conversa{list-style:none;counter-reset:passo;margin:0;padding:0;display:grid;gap:14px}
+.conversa li{counter-increment:passo;display:flex;align-items:flex-start;gap:12px}
+.conversa li::before{content:counter(passo);flex:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--menta-escura);color:#fff;font-family:var(--titulo);font-weight:700}
+.balao{background:#fff;padding:14px 18px;border-radius:6px 22px 22px 22px;font-weight:700;color:var(--cafe);box-shadow:0 2px 0 rgba(23,63,49,.12)}
+.agendar-botao{grid-column:2;justify-self:start}
+
+/* Endereço e horário */
+.visite-grade{display:grid;grid-template-columns:1.2fr 1fr;gap:20px;align-items:stretch}
+.visite-endereco address{font-style:normal;margin-top:18px;font-size:1.125rem}
+.antigo{color:var(--suave);font-size:.9375rem}
+.link-forte{display:inline-flex;align-items:center;min-height:44px;margin-top:10px;font-weight:800;color:var(--laranja);text-underline-offset:4px;text-decoration-thickness:2px}
+.cartao-horario{padding:28px;border-radius:var(--raio);background:#fff;border:2px solid var(--linha)}
+.cartao-horario h3{font-size:1.375rem}
+.cartao-horario dl{margin:14px 0 0}
+.cartao-horario div{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:2px dotted var(--linha)}
+.cartao-horario div:last-child{border-bottom:0}
+.cartao-horario dt{font-weight:700}
+.cartao-horario dd{margin:0;font-weight:800;font-variant-numeric:tabular-nums}
+
+
+/* No computador, o topo acompanha a rolagem logo abaixo da faixa */
+@media (min-width:761px){
+  .faixa-prototipo{height:var(--faixa);padding:0 16px;display:flex;align-items:center;justify-content:center}
+  .topo{position:sticky;top:var(--faixa);z-index:55;box-shadow:0 1px 0 var(--linha)}
+}
+
+.zap-fixo{display:none}
+
+/* ---------- Celular ---------- */
+@media (max-width:760px){
+  html{scroll-padding-top:56px}
+  body{font-size:1rem}
+  .faixa-prototipo{font-size:.75rem;padding:6px 12px}
+  .menu,.some-no-celular{display:none}
+  .so-celular{display:inline}
+  .topo-linha{justify-content:space-between;min-height:64px}
+  .marca{font-size:1.5rem}
+
+
+  .secao{padding:48px 0}
+
+  .agendar-grade{grid-template-columns:1fr}
+  .agendar-sub{margin-top:6px;font-size:1rem}
+  .agendar-botao{grid-column:auto;width:100%}
+
+  .visite-grade{grid-template-columns:1fr 1fr;gap:12px}
+  .visite-endereco{grid-column:1 / -1}
+  .visite-endereco address{margin-top:12px;font-size:1.0625rem}
+  .cartao-horario{grid-column:1 / -1;padding:20px}
+
+
+  .zap-fixo{display:flex;align-items:center;justify-content:center;gap:10px;position:fixed;z-index:50;left:16px;right:16px;bottom:calc(14px + env(safe-area-inset-bottom,0px));min-height:54px;border-radius:999px;background:var(--laranja);color:#fff;font-weight:800;text-decoration:none;box-shadow:0 4px 0 #7A2D0E,0 14px 28px -10px rgba(43,27,23,.5);visibility:hidden;opacity:0;transform:translateY(140%);transition:transform .25s,opacity .25s,visibility 0s .25s}
+  .zap-fixo.visivel{visibility:visible;opacity:1;transform:none;transition:transform .25s,opacity .25s}
+}
+@media (prefers-reduced-motion:reduce){.zap-fixo,.zap-fixo.visivel,.botao,.servico,.servico-link svg{transition:none}}
+
+/* Página 404 */
+.erro{min-height:100vh;display:grid;align-items:center}
+.erro h1{font-size:clamp(2rem,1.4rem + 2.4vw,3rem)}
+.erro p{margin-top:12px;color:var(--suave)}
+.erro .erro-acoes{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;margin-top:28px}
+
+
+/* Animações sutis: os blocos surgem de leve quando entram na tela.
+   Feito só com CSS (animation-timeline). Navegador que não entende simplesmente mostra tudo parado.
+   Quem pediu "menos movimento" no aparelho não vê animação nenhuma. */
+@keyframes surgir{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes chegar{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:no-preference){
+  .hero-conteudo{animation:chegar .6s ease-out both}
+  @supports (animation-timeline:view()){
+    .cabeca,.servico,.secao-galeria h2,.galeria li,.agendar-grade > div,.conversa li,.visite-endereco,.cartao-horario{
+      animation:surgir linear both;animation-timeline:view();animation-range:entry 5% entry 45%}
+  }
+}
+
+/* ===== Rodada 2: primeira dobra com foto, faixa de confiança, serviços em cartões, galeria e rodapé em colunas ===== */
+.hero{position:relative;overflow:hidden;background:var(--cafe);color:#fff;min-height:580px;display:flex;align-items:center;padding:72px 0 96px}
+.hero-foto{position:absolute;inset:0 0 0 30%}
+.hero-foto img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(43,27,23,1) 0%,rgba(43,27,23,1) 31%,rgba(43,27,23,.72) 44%,rgba(43,27,23,.25) 72%,rgba(43,27,23,.15) 100%)}
+.hero-conteudo{position:relative;z-index:2}
+.hero-local{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:.9375rem;color:#F3DFC8;margin-bottom:14px}
+.hero h1{font-size:clamp(2.5rem,1.3rem + 4.4vw,4.5rem);max-width:11ch}
+.hero h1 span{color:var(--manteiga)}
+.hero-lead{margin:20px 0 30px;max-width:30rem;font-size:1.1875rem;color:#F3E6D8}
+.hero .ponto{color:var(--laranja-vivo)}
+.ilustrativa{position:absolute;right:16px;top:12px;z-index:2;font-size:.75rem;color:rgba(255,255,255,.78)}
+.ilustrativa-nota{margin-top:14px;font-size:.8125rem;color:var(--suave)}
+
+.confianca{position:relative;z-index:3;margin-top:-44px}
+.confianca-grade{display:grid;grid-template-columns:repeat(3,1fr);background:#fff;border-radius:var(--raio);box-shadow:0 18px 40px -22px rgba(43,27,23,.45);border:1px solid var(--linha)}
+.confianca-item{display:flex;align-items:center;gap:14px;padding:22px 24px;text-decoration:none;color:inherit}
+.confianca-item + .confianca-item{border-left:1px solid var(--linha)}
+.confianca-ic{display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:12px;background:var(--cafe);color:var(--manteiga)}
+.confianca-ic svg{width:22px;height:22px}
+.confianca-item p{font-size:.875rem;color:var(--suave);line-height:1.4}
+.confianca-item b{display:block;font-size:1rem;color:var(--cafe)}
+a.confianca-item:hover b{text-decoration:underline}
+
+.servicos{margin-top:32px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.servico{display:flex;flex-direction:column;gap:10px;padding:26px 24px;background:#fff;border:1px solid var(--linha);border-radius:var(--raio);text-decoration:none;color:inherit;box-shadow:0 2px 0 rgba(43,27,23,.04);transition:border-color .2s,box-shadow .2s,transform .2s}
+.servico:hover{border-color:var(--laranja);box-shadow:0 16px 30px -20px rgba(43,27,23,.45);transform:translateY(-2px)}
+.servico-ic{display:grid;place-items:center;width:52px;height:52px;border-radius:14px;background:var(--menta);color:var(--menta-escura);margin-bottom:6px}
+.servico:nth-child(2) .servico-ic{background:var(--manteiga);color:#6B4A00}
+.servico:nth-child(3) .servico-ic{background:var(--creme-2);color:var(--laranja)}
+.servico-ic svg{width:28px;height:28px}
+.servico h3{font-size:1.5rem}
+.servico p{color:var(--suave)}
+.servico-link{margin-top:auto;padding-top:8px;display:inline-flex;align-items:center;gap:6px;font-weight:800;color:var(--laranja)}
+.servico-link svg{width:18px;height:18px;transition:transform .2s}
+.servico:hover .servico-link svg{transform:translateX(4px)}
+
+.secao-galeria{padding-top:0}
+.galeria{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.galeria li{overflow:hidden;border-radius:var(--raio);background:var(--creme-2)}
+.galeria img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover}
+
+.rodape{background:var(--cafe);color:#E6D2BD;padding:56px 0 calc(32px + env(safe-area-inset-bottom,0px));font-size:.9375rem}
+.rodape-grade{display:grid;grid-template-columns:1.4fr 1fr 1.2fr;gap:32px}
+.rodape-nome{font-family:var(--titulo);font-weight:700;font-size:1.75rem;color:#fff;margin-bottom:4px}
+.rodape .botao{margin-top:18px;box-shadow:none}
+.rodape-titulo{font-weight:800;color:#fff;margin-bottom:10px}
+.rodape ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.rodape a:not(.botao){color:#fff;font-weight:800}
+.rodape-fim{margin-top:36px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-size:.8125rem;color:#BFA996}
+
+@media (max-width:900px){
+  .servicos{grid-template-columns:1fr 1fr}
+  .servico:nth-child(3){grid-column:1 / -1}
+}
+@media (max-width:760px){
+  /* No celular a foto fica limpa no alto (o gato aparece inteiro) e o texto vem logo abaixo, sobre o fundo café */
+  .hero{min-height:0;padding:222px 0 76px}
+  .hero-foto{inset:0 0 auto 0;height:260px}
+  .hero-foto img{object-position:50% 52%}
+  .hero::after{background:linear-gradient(180deg,rgba(43,27,23,.08) 0,rgba(43,27,23,.12) 120px,rgba(43,27,23,.75) 205px,rgba(43,27,23,1) 260px)}
+  .hero h1{font-size:2.5rem}
+  .hero-lead{margin:14px 0 22px;font-size:1.0625rem}
+  .hero .botao{width:100%}
+  .ilustrativa{top:10px;right:12px;font-size:.6875rem;color:#fff;background:rgba(43,27,23,.55);padding:2px 8px;border-radius:6px}
+  .confianca{margin-top:-36px}
+  .confianca-grade{grid-template-columns:1fr}
+  .confianca-item{padding:14px 18px}
+  .confianca-item + .confianca-item{border-left:0;border-top:1px solid var(--linha)}
+  .servicos{gap:10px;margin-top:20px}
+  .servico{padding:16px 14px;gap:6px}
+  .servico-ic{width:42px;height:42px;margin-bottom:2px}
+  .servico-ic svg{width:22px;height:22px}
+  .servico h3{font-size:1.25rem}
+  .servico p{font-size:.875rem}
+  .servico-link{font-size:.875rem}
+  .galeria{grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+  .rodape{padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))}
+  .rodape-grade{grid-template-columns:1fr;gap:24px}
+  .rodape .botao{width:100%}
+}
+
+.voltar-pf{position:fixed;left:14px;bottom:14px;z-index:9999;background:#0E0F0C;color:#ECEBE4;border:2px solid #D8F27B;padding:10px 15px;font:600 14px/1 Arial,Helvetica,sans-serif;text-decoration:none;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.45)}.voltar-pf:hover,.voltar-pf:focus-visible{background:#D8F27B;color:#0E0F0C}
