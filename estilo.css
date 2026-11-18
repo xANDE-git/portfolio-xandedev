@@ -263,3 +263,6 @@ nav a:hover{color:var(--a)}
 @media(prefers-reduced-motion:no-preference){.bt::after{transition:transform .3s var(--e)}.bt:hover::after{transform:translate(3px,-3px)}}
 @media(hover:hover){.bt:hover,.bt.inv:hover{color:var(--f)}}
 .crs.fechando li:nth-child(n){animation-delay:.09s}.crs.fechando li:nth-last-child(1){animation-delay:0s}.crs.fechando li:nth-last-child(2){animation-delay:.03s}.crs.fechando li:nth-last-child(3){animation-delay:.06s}
+
+/* página do cliente: "XANDE" é mais curto que "ALEXANDRE"; linha 1 mais larga e maior para fechar na largura da tela */
+.pg-cliente{--s1:125%;--kr:.1710}.pg-cliente .l1{--k:.2117}
