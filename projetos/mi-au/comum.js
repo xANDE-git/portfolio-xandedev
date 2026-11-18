@@ -1,7 +1,7 @@
 // Único JavaScript do site: monta os links do WhatsApp e controla o botão fixo no celular.
 
 const ZAP = "5531900000000";
-const MENSAGEM = "Olá, Miau.Au! Vim pelo site e gostaria de agendar um horário para o meu pet.";
+const MENSAGEM = "Olá, Mi.Au! Vim pelo site e gostaria de agendar um horário para o meu pet.";
 
 // Todo link com data-zap vira um link do WhatsApp com a mensagem pronta.
 // Se o link tiver data-zap="outra mensagem", usa essa mensagem no lugar.
