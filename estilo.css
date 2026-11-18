@@ -266,3 +266,27 @@ nav a:hover{color:var(--a)}
 
 /* página do cliente: "XANDE" é mais curto que "ALEXANDRE"; linha 1 mais larga e maior para fechar na largura da tela */
 .pg-cliente{--s1:125%;--kr:.1710}.pg-cliente .l1{--k:.2117}
+
+/* ajustes 18/11/2026: menu com área de clique maior e sublinhado que cresce da esquerda; hover dos prints só no print; fundo do contato mais suave */
+nav{gap:8px}
+nav a{padding:14px 12px;text-decoration:none;background:linear-gradient(var(--a),var(--a)) no-repeat 12px calc(100% - 8px)/0 2px}
+nav a:hover,nav a:focus-visible{text-decoration:none;color:var(--t);background-size:calc(100% - 24px) 2px}
+.cont-l a span:last-child{background:linear-gradient(var(--f),var(--f)) no-repeat 0 100%/0 2px;padding-bottom:2px}
+.cont-l a:hover span:last-child,.cont-l a:focus-visible span:last-child{background-size:100% 2px}
+.cont-l a:hover{text-decoration:none}
+@media(prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}
+  nav a,.cont-l a span:last-child{transition:background-size .35s var(--e)}
+  /* hover dos clientes: só quando o mouse está no print; print e celular usam o mesmo tempo e a mesma curva */
+  .qd img,.cli-p .cel{transition:transform .6s var(--e)}
+  .qd img{will-change:transform;backface-visibility:hidden}
+  @media(hover:hover) and (min-width:1000px){
+    .cli:hover .pc img,.cli:hover .cel{transform:none}
+    .cli-p:hover .pc img{transform:scale(1.025)}
+    .cli-p:hover .cel{transform:translateY(-6px)}
+  }
+  /* X do fundo do contato: camada própria, curso curto e lento */
+  @keyframes deriva{from{transform:translate3d(0,-50%,0)}to{transform:translate3d(0,-48.5%,0)}}
+  .xg{animation-duration:48s;animation-timing-function:ease-in-out;will-change:transform}
+}
+html{scroll-padding-top:8px}
