@@ -128,7 +128,7 @@ a{color:inherit}img,svg{display:block}
 }
 @media (max-width:560px){.servicos{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rev{opacity:1;transform:none}}
-
+.xm-logo{display:flex;justify-content:center;width:fit-content;margin:0 auto;padding:14px 12px 4px;color:inherit;opacity:.32;transition:opacity .2s}.xm-logo:hover,.xm-logo:focus-visible{opacity:.85}
 .voltar-pf{position:fixed;left:14px;bottom:14px;z-index:9999;background:#0E0F0C;color:#ECEBE4;border:2px solid #D8F27B;padding:10px 15px;font:600 14px/1 Arial,Helvetica,sans-serif;text-decoration:none;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.45)}.voltar-pf:hover,.voltar-pf:focus-visible{background:#D8F27B;color:#0E0F0C}
 
 .arco-letra span{font:italic 400 clamp(9rem,18vw,15rem)/1 var(--serif);color:var(--rose)}
