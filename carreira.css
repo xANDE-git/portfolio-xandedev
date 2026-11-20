@@ -168,3 +168,19 @@
 
 .stk h3{font-size:clamp(22px,2vw,30px)}.stk li{font-size:clamp(16px,1.3vw,20px);padding:16px 0;color:var(--t)}
 .hero-i .cel{width:22%}
+
+/* seletor de idioma (PT | EN): no computador fica fixo no canto superior direito, sempre visível mesmo com a barra lateral recolhida; no celular entra na barra do topo */
+.lang{display:inline-flex;border:1px solid var(--m);background:var(--f);font-weight:700;font-size:13px;line-height:1;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%)}
+.lang a{padding:8px 10px;text-decoration:none;color:var(--t)}
+.lang a:hover{background:var(--l)}
+.lang a[aria-current]{background:var(--a);color:var(--f)}
+.lang .lg-l{display:none}
+.lang-pc{display:none}
+@media(min-width:1000px){
+  .lang-cel{display:none}
+  .lang-pc{display:inline-flex;position:fixed;z-index:6;top:20px;right:28px;font-size:14px}
+  .lang-pc a{padding:10px 16px}
+  .lang-pc .lg-l{display:inline}.lang-pc .lg-s{display:none}
+}
+/* celular: nome em duas linhas para caber logo, nome, PT|EN e botão do currículo numa linha só */
+@media(max-width:999px){.lado .nm{font-size:13px;line-height:1.05}.lado .nm span{display:block}.lado{gap:8px 12px}}
