@@ -20,10 +20,14 @@ h1,h2,h3,p,ul,ol,dl,dd{margin:0}ul,ol{padding:0;list-style:none}
 nav{display:flex;gap:24px;font-weight:600;font-size:16px}
 nav a{text-decoration:none;padding-block:8px;text-underline-offset:6px}nav a:hover{text-decoration:underline;text-decoration-color:var(--a)}
 .so-pc{display:none}
-/* link do currículo: separado do menu por um fio vertical; a seta lima avisa que leva para outra página */
-nav a.nav-cv{position:relative;white-space:nowrap;margin-left:12px}
-nav a.nav-cv::before{content:"";position:absolute;left:-10px;top:50%;width:1px;height:18px;margin-top:-9px;background:#45483E}
-nav a.nav-cv .st{color:var(--a);margin-left:4px}
+/* link do currículo: ao lado do logo, separado por um fio; a seta lima avisa que leva para outra página */
+.esq{display:flex;align-items:center;gap:12px;min-width:0}
+.esq .nav-cv{white-space:nowrap;font-weight:600;font-size:15px;line-height:1;text-decoration:none;padding:10px 0 10px 12px;border-left:1px solid #45483E}
+.esq .nav-cv .st{color:var(--a);margin-left:3px}
+.esq .nav-cv:hover{text-decoration:underline;text-decoration-color:var(--a);text-underline-offset:6px}
+@media(max-width:999px){.topo nav a{padding-inline:8px}.topo nav{gap:0}}
+@media(max-width:420px){.esq{gap:8px}.esq .nav-cv{font-size:14px;padding-left:10px}.topo nav{font-size:15px}.topo nav a{padding-inline:7px}}
+@media(min-width:1000px){.esq{gap:20px}.esq .nav-cv{font-size:16px;padding-left:20px}}
 
 /* primeira dobra */
 .hero{padding-bottom:64px}
