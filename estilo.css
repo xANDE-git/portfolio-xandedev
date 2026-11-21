@@ -318,3 +318,4 @@ html{scroll-padding-top:8px}
 /* menu acima do nome gigante: o texto do nome invadia a área dos links e roubava o mouse */
 .topo{position:relative;z-index:5;padding-top:16px;padding-bottom:20px}
 .nome{pointer-events:none;user-select:none}
+@media(max-width:380px){.esq{gap:6px}.esq .nav-cv{font-size:13px;padding-left:8px}.topo nav{font-size:14px}.topo nav a{padding-inline:6px}}

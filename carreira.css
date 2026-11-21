@@ -184,3 +184,12 @@
 }
 /* celular: nome em duas linhas para caber logo, nome, PT|EN e botão do currículo numa linha só */
 @media(max-width:999px){.lado .nm{font-size:13px;line-height:1.05}.lado .nm span{display:block}.lado{gap:8px 12px}}
+
+/* voltar ao portfólio: no topo da barra lateral (computador) ou como 1º item da faixa de seções (celular) */
+.voltar{font-weight:600;white-space:nowrap;text-decoration:none;color:var(--t)}
+.voltar i{font-style:normal;color:var(--a);margin-right:6px}
+.voltar:hover{text-decoration:underline;text-decoration-color:var(--a);text-underline-offset:5px}
+.voltar-pc{display:none}
+.lado nav a.voltar-cel{color:var(--t);padding-right:14px;margin-right:-6px;border-right:1px solid #45483E}
+.b-pc{display:none}
+@media(min-width:1000px){.voltar-pc{display:block;font-size:14px;margin-bottom:-16px}.lado nav a.voltar-cel{display:none}.b-pc{display:inline}.b-cel{display:none}}
