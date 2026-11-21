@@ -20,9 +20,10 @@ h1,h2,h3,p,ul,ol,dl,dd{margin:0}ul,ol{padding:0;list-style:none}
 nav{display:flex;gap:24px;font-weight:600;font-size:16px}
 nav a{text-decoration:none;padding-block:8px;text-underline-offset:6px}nav a:hover{text-decoration:underline;text-decoration-color:var(--a)}
 .so-pc{display:none}
-nav a.nav-cv{background:var(--a);color:var(--f);padding:8px 16px;margin-left:4px;white-space:nowrap;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%)}
-nav a.nav-cv:hover{text-decoration:none;background:var(--t)}
-nav a.nav-cv .st{margin-left:4px}
+/* link do currículo: separado do menu por um fio vertical; a seta lima avisa que leva para outra página */
+nav a.nav-cv{position:relative;white-space:nowrap;margin-left:12px}
+nav a.nav-cv::before{content:"";position:absolute;left:-10px;top:50%;width:1px;height:18px;margin-top:-9px;background:#45483E}
+nav a.nav-cv .st{color:var(--a);margin-left:4px}
 
 /* primeira dobra */
 .hero{padding-bottom:64px}
